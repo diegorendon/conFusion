@@ -16,6 +16,10 @@
         <button md-button>SHARE</button>
       </md-card-actions>
     </md-card>
+    <div fxFlex [hidden]="dish">
+      <md-spinner></md-spinner>
+      <h4>Loading . . . please wait</h4>
+    </div>
   </div>
 
   <div fxFlex="40">
@@ -27,6 +31,10 @@
         <p md-line>-- {{comment.author}} {{comment.date | date}}</p>
       </md-list-item>
     </md-list>
+    <div fxFlex [hidden]="dish">
+      <md-spinner></md-spinner>
+      <h4>Loading . . . please wait</h4>
+    </div>
   </div>
 
 </div>
