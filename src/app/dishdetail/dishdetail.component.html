@@ -38,9 +38,13 @@
         <p md-line>-- {{comment.author}} {{comment.date | date}}</p>
       </md-list-item>
     </md-list>
-    <div fxFlex [hidden]="dish">
+    <div fxFlex [hidden]="dish || errMess">
       <md-spinner></md-spinner>
       <h4>Loading . . . please wait</h4>
+    </div>
+    <div *ngIf="errMess">
+      <h2>Error</h2>
+      <h4>{{errMess}}</h4>
     </div>
   </div>
 
